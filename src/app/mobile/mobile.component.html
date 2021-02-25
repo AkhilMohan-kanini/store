@@ -1,0 +1,12 @@
+<p>Filter By Cost</p>
+<input type="number" name="cost" [(ngModel)]="cost"/> 
+<p>Cost is {{cost}}</p>
+<ol>
+    <li *ngFor="let mobile of mobiles|filter:cost" >
+        <p>Brand Name : <span>{{mobile.BrandName}}</span></p>
+        <p>Model Name : <span>{{mobile.ModelName}}</span></p>
+        <p>Price : <span>{{mobile.Price}}</span></p>
+        <p>Camera : <span>{{mobile.Camera}}</span></p>
+        <p>Memory : <span>{{mobile.Memory}}</span></p>
+    </li>
+</ol>

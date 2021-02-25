@@ -1,0 +1,16 @@
+
+<label>Enter Laptop to Search :   </label>
+<input type="text" name="searchLaptop" [(ngModel)]="searchLaptop"/> 
+
+<p>Laptop is {{searchLaptop}}</p>
+
+<ol>
+    <li *ngFor="let laptop of laptops | filterLaptop:searchLaptop" >
+        <h2>Brand Name : {{laptop.BrandName}}</h2>
+        <p>Model Name : {{laptop.ModelName}}</p>
+        <p>Price : {{laptop.Price}}</p>
+        <p>RAM : {{laptop.Ram}}</p>
+        <p>Processor : {{laptop.Processor}}</p>
+        <p>CPU Config : {{laptop.cpuConfig}}</p>
+    </li>
+</ol>
